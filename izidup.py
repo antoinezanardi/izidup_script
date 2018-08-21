@@ -35,7 +35,11 @@ def generateMessage(r, url):
 		message = "The connexion with the URL \"" + url + "\" couldn't be established"
 	elif r.status_code != 200:
 		message = "The URL \"" + url + "\" answered with code " + str(r.status_code) + "\n"
-		message += str(r.json())
+		try:
+			json = str(r.json())
+		except ValueError as e:
+			json = "No JSON response provided"
+		message += json
 	if message != "":
 		if useSlack == True:
 			sendSlackMsg(message)
