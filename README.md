@@ -10,4 +10,4 @@ If something is wrong with one of those (Can't connect to it or HTTP status code
 
 After cloning the project, open **izidup.py**. In the first lines of the script, you will find some informations to provide such as the domains you want to test, your slack webhook URL, and more depending of what you want to do.
 
-When it's all set, **you're ready to go**.
+When it's all set, execute it manually or by a cronjobs and **you're ready to go**.
